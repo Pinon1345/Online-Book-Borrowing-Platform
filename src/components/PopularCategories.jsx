@@ -32,7 +32,7 @@ import { Button } from '@heroui/react';
         return (
             <div className='container w-11/12 mx-auto mt-4 mb-8'>
                 <h2
-                    className={`${show ? "font-bold text-5xl text-center pb-15 pt-4 animate__animated animate__bounce animate__delay" : ""}`}>
+                    className={`${show ? "font-bold text-3xl text-blue-600 md:text-4xl text-center pb-15 pt-4 animate__animated animate__bounce animate__delay" : ""}`}>
                     Our Popular Categories
                 </h2>
 
@@ -51,7 +51,7 @@ import { Button } from '@heroui/react';
                             >
                             </Image>
                         </div>
-                        <h2 className='font-bold text-3xl text-center pt-4 text-amber-400'>Story Collection</h2>
+                        <h2 className='font-bold text-3xl text-center pt-4 text-purple-600'>Story Collection</h2>
                         <p className='font-semibold text-gray-800 text-justify pt-4 pb-3'>Discover captivating tales, timeless classics, and modern fiction that spark imagination and entertain readers of all ages.</p>
 
                         <p className='text-gray-500 flex items-center gap-2'><GiCheckMark className='text-green-500 w-5 h-5'></GiCheckMark> Explore fiction, romance, mystery & adventure</p>
@@ -72,7 +72,7 @@ import { Button } from '@heroui/react';
                             >
                             </Image>
                         </div>
-                        <h2 className='font-bold text-3xl text-center pt-4 text-amber-400'>Tech Hub</h2>
+                        <h2 className='font-bold text-3xl text-center pt-4 text-purple-600'>Tech Hub</h2>
                         <p className='font-semibold text-gray-800 text-justify pt-4 pb-3'>Learn programming, artificial intelligence, cybersecurity, web development, and the latest innovations shaping the future.</p>
 
                         <p className='text-gray-500 flex items-center gap-2'><GiCheckMark className='text-green-500 w-5 h-5'></GiCheckMark> Learn programming, AI, and web development</p>
@@ -93,7 +93,7 @@ import { Button } from '@heroui/react';
                             >
                             </Image>
                         </div>
-                        <h2 className='font-bold text-3xl text-center pt-4 text-amber-400'>Science World</h2>
+                        <h2 className='font-bold text-3xl text-center pt-4 text-purple-600'>Science World</h2>
                         <p className='font-semibold text-gray-800 text-justify pt-4 pb-3'>Explore the wonders of physics, chemistry, biology, astronomy, and groundbreaking scientific discoveries.</p>
 
                         <p className='text-gray-500 flex items-center gap-2'><GiCheckMark className='text-green-500 w-5 h-5'></GiCheckMark> Understand physics, chemistry & biology</p>
@@ -114,7 +114,7 @@ import { Button } from '@heroui/react';
                             >
                             </Image>
                         </div>
-                        <h2 className='font-bold text-3xl text-center pt-4 text-amber-400'>History Archive</h2>
+                        <h2 className='font-bold text-3xl text-center pt-4 text-purple-600'>History Archive</h2>
                         <p className='font-semibold text-gray-800 text-justify pt-4 pb-3'>Travel through ancient civilizations, world wars, famous leaders, and events that shaped human history.</p>
 
                         <p className='text-gray-500 flex items-center gap-2'><GiCheckMark className='text-green-500 w-5 h-5'></GiCheckMark> Learn ancient civilizations & world events</p>
