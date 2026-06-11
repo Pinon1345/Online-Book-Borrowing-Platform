@@ -1,11 +1,15 @@
 @import "tailwindcss";
 @import "@heroui/styles";
 
+/* Global Background Color */
+
 @layer base {
   body {
     @apply bg-white;
   }
 }
+
+/* Globar Button */
 
 @layer components {
   .btn-primary {

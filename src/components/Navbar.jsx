@@ -1,16 +1,18 @@
 "use client";
 
-import navImage from "next/image"
+import navImage from "@/assets/A8-(Logo-2).png"
 import { useState } from "react";
 import Link from "next/link";
 import { Button } from "@heroui/react";
 import Image from "next/image";
+import { GiHamburgerMenu } from "react-icons/gi";
+import { AiOutlineMenu } from "react-icons/ai";
 
 export default function Navbar() {
     const [open, setOpen] = useState(false);
 
     return (
-        <nav className="w-full border-b rounded-b-2xl bg-slate-100 shadow-md shadow-gray-300">
+        <nav className="w-full border-b rounded-b-2xl bg-slate-100 shadow-lg shadow-gray-300 sticky top-0 z-0">
             <div className="max-w-11/12 mx-auto px-4 py-3 flex items-center justify-between">
 
                 {/* Logo */}
@@ -20,7 +22,7 @@ export default function Navbar() {
 
                         <Image
                             className="w-13 h-13 border-2 border-gray-100 rounded-2xl"
-                            src="/assets/A8-(Logo-2).png"
+                            src={navImage}
                             alt="Navigation Logo"
                             width={100}
                             height={100}
@@ -35,9 +37,9 @@ export default function Navbar() {
 
                 <div className="hidden md:flex items-center gap-6 font-medium text-gray-700">
                     <Link href="/" className="hover:text-blue-600 text-lg">Home</Link>
-                    <Link href="/books" className="hover:text-blue-600 text-lg">Books</Link>
+                    <Link href="/books" className="hover:text-blue-600 text-lg">All Books</Link>
                     <Link href="/categories" className="hover:text-blue-600 text-lg">Categories</Link>
-                    <Link href="/dashboard" className="hover:text-blue-600 text-lg">Dashboard</Link>
+                    <Link href="/dashboard" className="hover:text-blue-600 text-lg">My Profile</Link>
                 </div>
 
                 {/* Right Button (Desktop) */}
@@ -52,9 +54,9 @@ export default function Navbar() {
 
                 <button
                     onClick={() => setOpen(!open)}
-                    className="md:hidden text-2xl"
+                    className="md:hidden text-2xl p-2 rounded-md transition-all duration-300 ease-in-out text-slate-700 hover:text-blue-600 hover:bg-slate-100 hover:shadow-lg hover:shadow-blue-500/20 hover:scale-110"
                 >
-                    ☰
+                    <AiOutlineMenu></AiOutlineMenu>
                 </button>
             </div>
 
@@ -75,7 +77,7 @@ export default function Navbar() {
                         onClick={() => setOpen(false)} href="/books"
                         className="px-3 py-1 rounded-md text-gray-600 transition-colors duration-300 hover:bg-slate-200 hover:text-gray-800 hover:border-2 border-gray-200 hover:font-semibold">
 
-                        Books
+                        All Books
 
                     </Link>
 
@@ -91,7 +93,7 @@ export default function Navbar() {
                         onClick={() => setOpen(false)} href="/dashboard"
                         className="px-3 py-1 rounded-md text-gray-600 transition-colors duration-300 hover:bg-slate-200 hover:text-gray-800 hover:border-2 border-gray-200 hover:font-semibold">
 
-                        Dashboard
+                        My Profile
 
                     </Link>
 
