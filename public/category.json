@@ -1,0 +1,152 @@
+{
+    "Story": [
+        {
+            "id": 1,
+            "title": "The Hidden Forest",
+            "author": "Emily Carter",
+            "description": "A thrilling story of friendship and adventure deep inside a mysterious forest.",
+            "category": "Story",
+            "available_quantity": 12,
+            "image_url": "https://i.ibb.co.com/Qv9vjnsq/1.jpg"
+        },
+        {
+            "id": 4,
+            "title": "The Lost Kingdom",
+            "author": "Michael Adams",
+            "description": "An epic tale of courage, treasure, and forgotten civilizations.",
+            "category": "Story",
+            "available_quantity": 10,
+            "image_url": "https://i.ibb.co.com/nMVVb28b/2.jpg"
+        },
+        {
+            "id": 7,
+            "title": "The Midnight Train",
+            "author": "Olivia Green",
+            "description": "A mysterious journey that changes the lives of everyone on board.",
+            "category": "Story",
+            "available_quantity": 7,
+            "image_url": "https://i.ibb.co.com/7Pn8wPp/7.jpg"
+        },
+        {
+            "id": 10,
+            "title": "Echoes of Time",
+            "author": "Nathan Scott",
+            "description": "A captivating story about time travel and second chances.",
+            "category": "Story",
+            "available_quantity": 6,
+            "image_url": "https://i.ibb.co.com/p64s1vXP/10.jpg"
+        },
+        {
+            "id": 13,
+            "title": "Beyond the Mountains",
+            "author": "Grace Hill",
+            "description": "A heartwarming adventure of dreams, determination, and discovery.",
+            "category": "Story",
+            "available_quantity": 8,
+            "image_url": "https://i.ibb.co.com/N6MztDh4/13.jpg"
+        },
+        {
+            "id": 16,
+            "title": "Whispers of the Sea",
+            "author": "Henry Collins",
+            "description": "A beautiful story of hope, love, and the mysteries of the ocean.",
+            "category": "Story",
+            "available_quantity": 11,
+            "image_url": "https://i.ibb.co.com/MyY8hrGv/16.jpg"
+        }
+    ],
+    "Tech": [
+        {
+            "id": 2,
+            "title": "Mastering JavaScript",
+            "author": "Daniel Brooks",
+            "description": "A practical guide to modern JavaScript programming for beginners and professionals.",
+            "category": "Tech",
+            "available_quantity": 8,
+            "image_url": "https://i.ibb.co.com/3mkkKxqR/3.jpg"
+        },
+        {
+            "id": 5,
+            "title": "AI for Everyone",
+            "author": "Sarah Wilson",
+            "description": "An easy introduction to artificial intelligence and its real-world applications.",
+            "category": "Tech",
+            "available_quantity": 9,
+            "image_url": "https://i.ibb.co.com/1f1gPRcv/5.jpg"
+        },
+        {
+            "id": 8,
+            "title": "Building Web Apps",
+            "author": "Ryan Cooper",
+            "description": "Learn the fundamentals of creating modern and responsive web applications.",
+            "category": "Tech",
+            "available_quantity": 11,
+            "image_url": "https://i.ibb.co.com/nMn6pqG4/8.jpg"
+        },
+        {
+            "id": 11,
+            "title": "Cloud Computing Basics",
+            "author": "Kevin Turner",
+            "description": "Understand the concepts, services, and benefits of cloud computing.",
+            "category": "Tech",
+            "available_quantity": 10,
+            "image_url": "https://i.ibb.co.com/324fGYS/11.jpg"
+        },
+        {
+            "id": 14,
+            "title": "Python Programming Essentials",
+            "author": "Andrew Lewis",
+            "description": "A beginner-friendly guide to coding with Python and solving real problems.",
+            "category": "Tech",
+            "available_quantity": 12,
+            "image_url": "https://i.ibb.co.com/3mB7ycPG/14.jpg"
+        }
+    ],
+    "Science": [
+        {
+            "id": 3,
+            "title": "The Wonders of Space",
+            "author": "Sophia Miller",
+            "description": "Explore the mysteries of the universe, stars, and distant galaxies.",
+            "category": "Science",
+            "available_quantity": 15,
+            "image_url": "https://i.ibb.co.com/PGJSWckF/4.jpg"
+        },
+        {
+            "id": 6,
+            "title": "Secrets of the Ocean",
+            "author": "James Parker",
+            "description": "Discover fascinating marine life and the science of the deep sea.",
+            "category": "Science",
+            "available_quantity": 14,
+            "image_url": "https://i.ibb.co.com/S4fYL6HY/6.jpg"
+        },
+        {
+            "id": 9,
+            "title": "The Human Brain",
+            "author": "Laura Bennett",
+            "description": "A fascinating exploration of how the brain works and learns.",
+            "category": "Science",
+            "available_quantity": 13,
+            "image_url": "https://i.ibb.co.com/sJ1HFfmG/9.jpg"
+        },
+        {
+            "id": 12,
+            "title": "Climate and Earth",
+            "author": "Rachel Evans",
+            "description": "Learn about climate change, ecosystems, and our changing planet.",
+            "category": "Science",
+            "available_quantity": 16,
+            "image_url": "https://i.ibb.co.com/670BPvj4/12.jpg"
+        },
+        {
+            "id": 15,
+            "title": "The Magic of Physics",
+            "author": "Victoria Clark",
+            "description": "Explore the laws of motion, energy, and the forces shaping our world.",
+            "category": "Science",
+            "available_quantity": 9,
+            "image_url": "https://i.ibb.co.com/84GPH7v9/15.jpg"
+        }
+    ]
+}
