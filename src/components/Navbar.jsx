@@ -37,9 +37,9 @@ export default function Navbar() {
 
                 <div className="hidden md:flex items-center gap-6 font-medium text-gray-700">
                     <Link href="/" className="hover:text-blue-600 text-lg">Home</Link>
-                    <Link href="/books" className="hover:text-blue-600 text-lg">All Books</Link>
+                    <Link href="/allBooks" className="hover:text-blue-600 text-lg">All Books</Link>
                     <Link href="/categories" className="hover:text-blue-600 text-lg">Categories</Link>
-                    <Link href="/dashboard" className="hover:text-blue-600 text-lg">My Profile</Link>
+                    <Link href="/myProfile" className="hover:text-blue-600 text-lg">My Profile</Link>
                 </div>
 
                 {/* Right Button (Desktop) */}
