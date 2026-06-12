@@ -48,7 +48,7 @@ const ChooseLibrary = () => {
     }, []);
 
     return (
-        <section className="py-16 px-4 md:px-12 bg-white">
+        <section className="pt-10 pb-16 px-4 md:px-12 bg-white">
             {/* Heading */}
             <div className="text-center mb-12">
                 <h2

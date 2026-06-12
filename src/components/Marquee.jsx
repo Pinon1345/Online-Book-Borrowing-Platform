@@ -4,7 +4,7 @@ import Marquee from 'react-fast-marquee';
 const MarqueePage = () => {
     return (
 
-        <div className="w-11/12 mx-auto mt-8 mb-10">
+        <div className="w-11/12 mx-auto mt-10 mb-10">
             <div className="bg-slate-100 border-4 border-slate-200 shadow-lg px-4 py-3 rounded-xl flex flex-col md:flex-row items-center gap-4">
 
                 <button className="bg-blue-600 text-white px-6 py-1 rounded-2xl font-bold text-lg hover:bg-blue-700 transition duration-300">

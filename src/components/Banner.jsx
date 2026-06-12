@@ -86,8 +86,10 @@ const Banner = () => {
                                         {item.desc}
                                     </p>
 
-                                    <button className="mt-6 bg-blue-600 text-white px-6 py-2 rounded-xl font-semibold transition-all duration-300 hover:bg-blue-700 hover:-translate-y-1">
-                                        Explore Books
+                                    <h2 className="text-3xl font-bold pt-2 bg-linear-to-r from-blue-500 via-purple-500 to-indigo-600 bg-clip-text text-transparent">Find Your Next Read</h2>
+
+                                    <button className="mt-5 bg-blue-600 text-white px-6 py-2 rounded-xl font-semibold transition-all duration-300 hover:bg-blue-700 hover:-translate-y-1">
+                                        Browse Now
                                     </button>
                                 </div>
 
