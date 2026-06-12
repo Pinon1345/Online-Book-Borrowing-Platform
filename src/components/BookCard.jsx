@@ -37,7 +37,7 @@ const BookCard = ({ book }) => {
 
                 </div>
 
-                <Link href="/">
+                <Link href={`/allBooks/${book.id}`}>
                     <Button className="btn-primary rounded-2xl w-full text-lg px-3 mt-5 mb-3">View Details <FaArrowRight></FaArrowRight></Button>
                 </Link>
 
