@@ -50,7 +50,7 @@ export default function Navbar() {
                     <Link href="/" className="hover:text-blue-600 text-lg">Home</Link>
                     <Link href="/allBooks" className="hover:text-blue-600 text-lg">All Books</Link>
                     <Link href="/categories" className="hover:text-blue-600 text-lg">Categories</Link>
-                    <Link href="/myProfile" className="hover:text-blue-600 text-lg">My Profile</Link>
+                    <Link href="/profile" className="hover:text-blue-600 text-lg">My Profile</Link>
                 </div>
 
                 {/* Right Button (Desktop) */}
@@ -120,7 +120,7 @@ export default function Navbar() {
                     </Link>
 
                     <Link
-                        onClick={() => setOpen(false)} href="/books"
+                        onClick={() => setOpen(false)} href="/allBooks"
                         className="px-3 py-1 rounded-md text-gray-600 transition-colors duration-300 hover:bg-slate-200 hover:text-gray-800 hover:border-2 border-gray-200 hover:font-semibold">
 
                         All Books
@@ -136,7 +136,7 @@ export default function Navbar() {
                     </Link>
 
                     <Link
-                        onClick={() => setOpen(false)} href="/dashboard"
+                        onClick={() => setOpen(false)} href="/profile"
                         className="px-3 py-1 rounded-md text-gray-600 transition-colors duration-300 hover:bg-slate-200 hover:text-gray-800 hover:border-2 border-gray-200 hover:font-semibold">
 
                         My Profile
