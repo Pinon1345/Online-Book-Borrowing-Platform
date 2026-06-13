@@ -45,9 +45,19 @@ export default function Navbar() {
                 {/* Right Button (Desktop) */}
 
                 <div className="hidden md:block">
-                    <Button className="btn-primary">
-                        Login
-                    </Button>
+                    <div className="flex items-center gap-3">
+                        <Link href={"/signin"} className="block">
+                            <Button className="btn-primary">
+                                Login
+                            </Button>
+                        </Link>
+
+                        <Link href={"/signup"} className="block">
+                            <Button className="btn-primary">
+                                Signup
+                            </Button>
+                        </Link>
+                    </div>
                 </div>
 
                 {/* Mobile Button */}
@@ -97,9 +107,21 @@ export default function Navbar() {
 
                     </Link>
 
-                    <Button className="mx-3 mb-2 mt-2 btn-primary p-3 text-lg">
-                        Login
-                    </Button>
+                    <div className="flex items-center">
+                        <Link href={"/signin"} className="block">
+                            <Button className="mx-3 mb-2 mt-2 btn-primary p-3 text-lg">
+                                Login
+                            </Button>
+                        </Link>
+
+                        <Link href={"/signup"} className="block">
+                            <Button className="mx-3 mb-2 mt-2 btn-primary p-3 text-lg">
+                                Signup
+                            </Button>
+                        </Link>
+                    </div>
+
+
                 </div>
             )}
         </nav>
