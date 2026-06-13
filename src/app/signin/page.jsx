@@ -3,64 +3,41 @@ import { authClient } from "@/lib/auth-client";
 import { Check } from "@gravity-ui/icons";
 import { Button, Description, FieldError, Form, Input, Label, TextField } from "@heroui/react";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { FaUserCheck } from "react-icons/fa";
 import { GrPowerReset } from "react-icons/gr";
-import { IoIosEye, IoIosEyeOff } from "react-icons/io";
 
-
-const SignUpPage = () => {
-
-    const router = useRouter()
+const SignInPage = () => {
 
     const onSubmit = async (e) => {
         e.preventDefault();
 
-        const name = e.target.name.value;
-        const image = e.target.image.value;
         const email = e.target.email.value;
         const password = e.target.password.value;
-        console.log("Signup Data:", { name, image, email, password });
+        console.log("Signin Data:", { email, password });
 
-        const { data, error } = await authClient.signUp.email({
-            name,
-            image,
+        const { data, error } = await authClient.signIn.email({
+
             email,
-            password
+            password,
+            callbackURL: "/"
 
         })
 
-        console.log("SignUp Information:", { data, error });
-
-        if (data) {
-            alert("Congratulations! Registration Successful")
-            router.push("/")
-        }
+        console.log("SignIn Information:", { data, error });
 
         if (error) {
-            alert("Registration Failed! Try again later")
+            alert(error.message)
         }
 
-
-
-        // const formData = new FormData(e.currentTarget);
-        // const data = {};
-
-        // // Convert FormData to plain object
-
-        // formData.forEach((value, key) => {
-        //     data[key] = value.toString();
-        // });
-
-
-        // alert(`Form submitted with: ${JSON.stringify(data, null, 2)}`);
-    };
+        if (data) {
+            alert("Login Successful")
+        }
+    }
 
     const [isShowPassword, setIsShowPassword] = useState(false);
 
     return (
-
         <div className="container w-11/12 mx-auto min-h-screen flex flex-col justify-center items-center">
 
 
@@ -71,72 +48,15 @@ const SignUpPage = () => {
                 <h2 className="text-4xl md:text-5xl font-bold text-center text-blue-700 mb-2">
                     Book Borrowing Platform
                 </h2>
-                <h2 className="text-3xl md:text-4xl pt-1 font-semibold text-center text-gray-500">Register your account</h2>
+                <h2 className="text-3xl md:text-4xl pt-1 font-semibold text-center text-gray-500">Signin your account</h2>
 
                 <p className="text-center text-sm text-gray-500 mb-6 mt-3">
-                    Welcome! Please enter your details.
+                    Welcome back! Please enter your details.
                 </p>
 
                 {/* Form */}
 
                 <Form className="flex flex-col gap-4" onSubmit={onSubmit}>
-
-                    {/* Name field */}
-
-                    <TextField
-                        isRequired
-                        name="name"
-                        type="text"
-                        validate={(value) => {
-                            if (value.length < 3) {
-                                return "Name must be at least 3 characters";
-                            }
-                            return null;
-                        }}
-                    >
-                        <Label className="font-semibold text-lg">Name</Label>
-                        <Input placeholder="Enter Your Full Name" variant="secondary" />
-                        <FieldError />
-                    </TextField>
-
-                    {/* Image URL field */}
-
-                    <TextField
-                        name="image"
-                        type="text"
-                        validate={(value) => {
-                            if (!value) return null; // optional field
-
-                            const isBase64 = value.startsWith("data:image/");
-
-                            if (isBase64) return null;
-
-                            //  Allow normal URL
-                            try {
-                                new URL(value);
-                            } catch {
-                                return "Invalid image format";
-                            }
-
-                            // Must be image link
-                            const urlPattern = /\.(jpg|jpeg|png|gif|webp|svg)$/i;
-
-                            if (!urlPattern.test(value)) {
-                                return "URL must be an image (.jpg, .png, .webp, etc)";
-                            }
-
-                            return null;
-                        }}
-                    >
-                        <Label className="font-semibold text-lg">Image URL (Optional)</Label>
-
-                        <Input
-                            placeholder="https://example.com/image.jpg (300x300 recommended)"
-                            variant="secondary"
-                        />
-
-                        <FieldError />
-                    </TextField>
 
                     {/* Email field */}
 
@@ -195,7 +115,6 @@ const SignUpPage = () => {
 
                     </TextField>
 
-
                     <Link href={"/"}>
 
                         <div className="flex items-center justify-center gap-4 mt-2">
@@ -217,6 +136,18 @@ const SignUpPage = () => {
 
 
                 </Form>
+
+                {/* Footer */}
+
+                <p className="text-center text-sm text-gray-500 mt-6">
+                    Don’t Have An Account ?{" "}
+                    <Link href={"/signup"}>
+                        <span className="text-red-600 text-lg font-semibold cursor-pointer hover:underline">
+                            Register
+                        </span>
+                    </Link>
+                </p>
+
             </div>
 
 
@@ -224,4 +155,4 @@ const SignUpPage = () => {
     );
 };
 
-export default SignUpPage;
+export default SignInPage;

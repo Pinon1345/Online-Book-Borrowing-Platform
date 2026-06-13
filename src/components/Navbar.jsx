@@ -48,7 +48,7 @@ export default function Navbar() {
                     <div className="flex items-center gap-3">
                         <Link href={"/signin"} className="block">
                             <Button className="btn-primary">
-                                Login
+                                Signin
                             </Button>
                         </Link>
 
@@ -110,7 +110,7 @@ export default function Navbar() {
                     <div className="flex items-center">
                         <Link href={"/signin"} className="block">
                             <Button className="mx-3 mb-2 mt-2 btn-primary p-3 text-lg">
-                                Login
+                                Signin
                             </Button>
                         </Link>
 
