@@ -3,12 +3,18 @@
 import UpdateUserModal from '@/components/UpdateUserModal';
 import { authClient } from '@/lib/auth-client';
 import Image from 'next/image';
+import { redirect } from 'next/navigation';
 import React, { useEffect, useState } from 'react';
 
 const ProfilePage = () => {
 
     const userData = authClient.useSession()
     const user = userData.data?.user
+
+    // if (!user) {
+    //     redirect("/signin")
+    // }
+
 
     console.log("Profile User Data", user);
 

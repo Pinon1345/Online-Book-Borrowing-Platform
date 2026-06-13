@@ -54,7 +54,7 @@ const BookDetails = async ({ params }) => {
 
                 </div>
 
-                <Link href={"/allBooks"}>
+                <Link href={"/"}>
                     <Button className="btn-primary w-6/12 rounded-full mt-6"><PiHandDepositFill className='w-5 h-5 mr-1'></PiHandDepositFill> Borrow This Book</Button>
                 </Link>
 
