@@ -1,36 +1,45 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Project Name: ONLINE BOOK BORROWING PLATFORM
+Project Contributor: FOURKAN BIN ILIAS (PINON)
 
-## Getting Started
+A modern web-based library system built with Next.js, Better Auth, and MongoDB, allowing users to browse, search, and borrow books digitally with a smooth and responsive UI.
 
-First, run the development server:
+~Project Features:-
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+1. Browse all books by category
+2. Search books by title
+3. Filter books (Story, Tech, Science)
+4. User authentication (Better Auth)
+5. Profile update with image & name
+6. Fully responsive UI (mobile + desktop)
+7. Fast performance with Next.js App Router
+8. Modern UI using HeroUI + Tailwind CSS
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+~ Core Functionalities:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+* Book System
+View all books from API
+Books grouped by category (Story, Tech, Science)
+Filter books dynamically
+Search books by title
 
-## Learn More
+* User System
+Login / Register
+Update profile (name + image)
+Avatar fallback (first letter if no image)
 
-To learn more about Next.js, take a look at the following resources:
+* Search & Filter
+Category-based filtering
+Live search functionality
+Combined filter system (category + search)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+~ Tech Stack:
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+a. Next.js (App Router)
+b. React.js
+c. Tailwind CSS
+d. HeroUI
+e. Better Auth
+f. MongoDB (Atlas)
+g. Vercel Deployment
