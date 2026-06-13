@@ -3,13 +3,24 @@
 import navImage from "@/assets/A8-(Logo-2).png"
 import { useState } from "react";
 import Link from "next/link";
-import { Button } from "@heroui/react";
+import { Avatar, Button } from "@heroui/react";
 import Image from "next/image";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { AiOutlineMenu } from "react-icons/ai";
+import { authClient } from "@/lib/auth-client";
 
 export default function Navbar() {
+
+    const userData = authClient.useSession()
+    const user = userData.data?.user
+
+    console.log(user);
+
     const [open, setOpen] = useState(false);
+
+    const handleSignOut = async () => {
+        await authClient.signOut()
+    }
 
     return (
         <nav className="w-full border-b rounded-b-2xl bg-slate-100 shadow-lg shadow-gray-300 sticky top-0 z-50">
@@ -45,19 +56,44 @@ export default function Navbar() {
                 {/* Right Button (Desktop) */}
 
                 <div className="hidden md:block">
-                    <div className="flex items-center gap-3">
+                    {!user && <div className="flex items-center gap-3">
                         <Link href={"/signin"} className="block">
                             <Button className="btn-primary">
-                                Signin
+                                Sign In
                             </Button>
                         </Link>
 
                         <Link href={"/signup"} className="block">
                             <Button className="btn-primary">
-                                Signup
+                                Sign Up
                             </Button>
                         </Link>
-                    </div>
+                    </div>}
+
+                    {
+                        user && <div className="flex items-center gap-4">
+                            <div className="flex items-center gap-2">
+                                <h2 className="text-xl font-semibold">Hello! <span className="text-2xl md:text-3xl text-blue-600 font-bold">{user?.name}</span></h2>
+                                <Avatar>
+                                    <Avatar.Image
+                                        alt={user?.name}
+                                        src={user?.image}
+                                        referrerPolicy="no-referrer"
+                                    />
+                                    <Avatar.Fallback>{user?.name.charAt(0)}</Avatar.Fallback>
+                                </Avatar>
+                            </div>
+
+                            <Button
+                                onClick={handleSignOut}
+                                className="btn-primary">
+                                Sign Out
+                            </Button>
+
+
+                        </div>
+                    }
+
                 </div>
 
                 {/* Mobile Button */}
@@ -107,19 +143,43 @@ export default function Navbar() {
 
                     </Link>
 
-                    <div className="flex items-center">
+                    {!user && <div className="flex items-center">
                         <Link href={"/signin"} className="block">
                             <Button className="mx-3 mb-2 mt-2 btn-primary p-3 text-lg">
-                                Signin
+                                Sign In
                             </Button>
                         </Link>
 
                         <Link href={"/signup"} className="block">
                             <Button className="mx-3 mb-2 mt-2 btn-primary p-3 text-lg">
-                                Signup
+                                Sign Up
                             </Button>
                         </Link>
-                    </div>
+                    </div>}
+
+                    {
+                        user && <div className="flex flex-col items-center gap-4 mb-2">
+                            <div className="flex flex-col items-center mb-2 gap-3">
+                                <h2 className="text-xl font-semibold">Hello! <span className="text-2xl md:text-3xl text-blue-600 font-bold">{user?.name}</span></h2>
+                                <Avatar>
+                                    <Avatar.Image
+                                        alt={user?.name}
+                                        src={user?.image}
+                                        referrerPolicy="no-referrer"
+                                    />
+                                    <Avatar.Fallback>{user?.name.charAt(0)}</Avatar.Fallback>
+                                </Avatar>
+                            </div>
+
+                            <Button
+                                onClick={handleSignOut}
+                                className="btn-primary">
+                                Sign Out
+                            </Button>
+
+
+                        </div>
+                    }
 
 
                 </div>

@@ -6,6 +6,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { FaUserCheck } from "react-icons/fa";
+import { FcGoogle } from "react-icons/fc";
 import { GrPowerReset } from "react-icons/gr";
 import { IoIosEye, IoIosEyeOff } from "react-icons/io";
 
@@ -27,7 +28,8 @@ const SignUpPage = () => {
             name,
             image,
             email,
-            password
+            password,
+            callbackURL: "/"
 
         })
 
@@ -56,6 +58,7 @@ const SignUpPage = () => {
 
         // alert(`Form submitted with: ${JSON.stringify(data, null, 2)}`);
     };
+
 
     const [isShowPassword, setIsShowPassword] = useState(false);
 
@@ -198,7 +201,7 @@ const SignUpPage = () => {
 
                     <Link href={"/"}>
 
-                        <div className="flex items-center justify-center gap-4 mt-2">
+                        <div className="flex items-center justify-center gap-4 mt-2 mb-4">
 
 
                             <Button type="submit" className="btn-primary w-6/12 rounded-full">
@@ -217,6 +220,8 @@ const SignUpPage = () => {
 
 
                 </Form>
+
+
             </div>
 
 

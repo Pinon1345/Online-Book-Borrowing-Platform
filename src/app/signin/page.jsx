@@ -5,6 +5,7 @@ import { Button, Description, FieldError, Form, Input, Label, TextField } from "
 import Link from "next/link";
 import { useState } from "react";
 import { FaUserCheck } from "react-icons/fa";
+import { FcGoogle } from "react-icons/fc";
 import { GrPowerReset } from "react-icons/gr";
 
 const SignInPage = () => {
@@ -31,8 +32,14 @@ const SignInPage = () => {
         }
 
         if (data) {
-            alert("Login Successful")
+            alert("Congratulations! Signin Successful")
         }
+    }
+
+    const handleGoogleSignIn = async () => {
+        await authClient.signIn.social({
+            provider: 'google'
+        })
     }
 
     const [isShowPassword, setIsShowPassword] = useState(false);
@@ -139,7 +146,7 @@ const SignInPage = () => {
 
                 {/* Footer */}
 
-                <p className="text-center text-sm text-gray-500 mt-6">
+                <p className="text-center text-sm text-gray-500 mt-6 mb-2">
                     Don’t Have An Account ?{" "}
                     <Link href={"/signup"}>
                         <span className="text-red-600 text-lg font-semibold cursor-pointer hover:underline">
@@ -147,6 +154,28 @@ const SignInPage = () => {
                         </span>
                     </Link>
                 </p>
+
+                {/* Google Sign Up */}
+
+                {/* Divider */}
+                <div className="flex items-center my-6 w-full">
+                    <div className="flex-1 border-t border-gray-300"></div>
+                    <span className="px-4 text-sm font-medium text-gray-400">
+                        OR
+                    </span>
+                    <div className="flex-1 border-t border-gray-300"></div>
+                </div>
+
+                {/* Google Sign Up Button */}
+
+                <Button
+                    onClick={handleGoogleSignIn}
+                    type="button"
+                    className="mt-2 w-full h-12 rounded-xl border border-gray-300 bg-white text-gray-700 font-semibold flex items-center justify-center gap-3 shadow-sm transition-all duration-300 hover:bg-gray-50 hover:border-blue-500 text-lg hover:shadow-lg active:scale-[0.98]"
+                >
+                    <FcGoogle className="w-6 h-6" />
+                    Continue with Google
+                </Button>
 
             </div>
 
