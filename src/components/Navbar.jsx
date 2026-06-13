@@ -73,7 +73,7 @@ export default function Navbar() {
                     {
                         user && <div className="flex items-center gap-4">
                             <div className="flex items-center gap-2">
-                                <h2 className="text-xl font-semibold">Hello! <span className="text-2xl md:text-3xl text-blue-600 font-bold">{user?.name}</span></h2>
+                                <h2 className="text-xl font-semibold">Hello! <span className="text-2xl text-blue-600 font-bold">{user?.name}</span></h2>
                                 <Avatar>
                                     <Avatar.Image
                                         alt={user?.name}
